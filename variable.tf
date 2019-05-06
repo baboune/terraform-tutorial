@@ -1,3 +1,6 @@
+#
+# Project variables
+#
 variable "project_name" {
   default = "flames-dev"
 }

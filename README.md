@@ -5,13 +5,23 @@ An introduction to Terraform.
 Steps:
 
 * Terraform Data vs Resource
-* Setup credentials from 1Password
-* Find the network `Default`
+* Setup credentials from 1Password -> Download service-account JSON file
+
+```bash
+# The credentials are set as part of the context
+# example
+# export TF_CREDS="/tmp/bla.json"
+export TF_CREDS="<path to JSON file>"
+export GOOGLE_APPLICATION_CREDENTIALS="${TF_CREDS}"
+```
+
+* Find the network `Default`.  Hint: Use GCP console, and <https://www.terraform.io/docs/providers/google/d/datasource_compute_subnetwork.html>
 * Create a VM connected to the `Default` network based on an `Ubuntu` image and using a `f1-micro` machine type.
+* Examin the content of the created state file: `terraform.state`
 * Cleanup (`terraform destroy`)
 
 
-Commands:
+Useful commands:
 
 ```bash
 $ # Download plugin as specified by provider
@@ -36,6 +46,10 @@ $ terraform plan
 
 $ # Execute plan
 $ terraform apply
+...
+
+$ # Delete everything
+$ terraform destroy
 ...
 
 ```

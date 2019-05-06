@@ -1,4 +1,10 @@
+#
+# Definition of the Compute infrastructure
+#
 
+#
+# See https://www.terraform.io/docs/providers/google/r/compute_instance.html
+# 
 resource "google_compute_instance" "tutorial_instance" {
   name         = "${var.base_name}tutorial-0${count.index}"
   machine_type = "<specify my value>"
