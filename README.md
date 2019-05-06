@@ -17,7 +17,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="${TF_CREDS}"
 
 * Find the network `Default`.  Hint: Use GCP console, and <https://www.terraform.io/docs/providers/google/d/datasource_compute_subnetwork.html>
 * Create a VM connected to the `Default` network based on an `Ubuntu` image and using a `f1-micro` machine type.
-* Examin the content of the created state file: `terraform.state`
+* Examine the content of the created state file: `terraform.state`
 * Cleanup (`terraform destroy`)
 
 
